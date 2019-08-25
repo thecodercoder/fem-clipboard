@@ -1,0 +1,57 @@
+
+.grid-parent {
+    display: flex;
+}
+
+.grid-child {
+    flex: 1;
+}
+
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.supercharge {
+
+    .content {
+        margin-bottom: 70px;
+
+        @include breakpoint(large){
+            margin-bottom: 40px;
+        }
+    }
+
+    &__columns {
+
+        @include breakpoint(large){
+            //display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+    }
+
+    &__column {
+        margin-bottom: 60px;
+
+        @include breakpoint(large){
+            //flex: 1;
+        }
+    }
+
+    &__icon {
+        height: 48px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint(large){
+            margin-bottom: 36px;
+        }
+    }
+}
